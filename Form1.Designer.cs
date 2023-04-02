@@ -30,16 +30,19 @@
         {
             hpProgressBar = new ProgressBar();
             hpLabel = new Label();
+            Player = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)Player).BeginInit();
             SuspendLayout();
             // 
             // hpProgressBar
             // 
-            hpProgressBar.BackColor = Color.LimeGreen;
-            hpProgressBar.ForeColor = Color.RosyBrown;
+            hpProgressBar.BackColor = SystemColors.ButtonFace;
+            hpProgressBar.ForeColor = Color.WhiteSmoke;
             hpProgressBar.Location = new Point(602, 12);
             hpProgressBar.Name = "hpProgressBar";
             hpProgressBar.Size = new Size(186, 20);
             hpProgressBar.TabIndex = 0;
+            hpProgressBar.Value = 100;
             // 
             // hpLabel
             // 
@@ -50,15 +53,27 @@
             hpLabel.TabIndex = 1;
             hpLabel.Text = "HP:";
             // 
+            // Player
+            // 
+            Player.BackColor = SystemColors.ControlDarkDark;
+            Player.Location = new Point(319, 213);
+            Player.Name = "Player";
+            Player.Size = new Size(125, 62);
+            Player.TabIndex = 2;
+            Player.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Player);
             Controls.Add(hpLabel);
             Controls.Add(hpProgressBar);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)Player).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -67,5 +82,6 @@
 
         private ProgressBar hpProgressBar;
         private Label hpLabel;
+        private PictureBox Player;
     }
 }
