@@ -28,12 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            hpProgressBar = new ProgressBar();
+            hpLabel = new Label();
+            SuspendLayout();
+            // 
+            // hpProgressBar
+            // 
+            hpProgressBar.BackColor = Color.LimeGreen;
+            hpProgressBar.ForeColor = Color.RosyBrown;
+            hpProgressBar.Location = new Point(602, 12);
+            hpProgressBar.Name = "hpProgressBar";
+            hpProgressBar.Size = new Size(186, 20);
+            hpProgressBar.TabIndex = 0;
+            // 
+            // hpLabel
+            // 
+            hpLabel.AutoSize = true;
+            hpLabel.Location = new Point(565, 12);
+            hpLabel.Name = "hpLabel";
+            hpLabel.Size = new Size(31, 20);
+            hpLabel.TabIndex = 1;
+            hpLabel.Text = "HP:";
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(hpLabel);
+            Controls.Add(hpProgressBar);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private ProgressBar hpProgressBar;
+        private Label hpLabel;
     }
 }
